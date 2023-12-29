@@ -1,11 +1,11 @@
 import cart from "./assets/cart.svg"
 import { FaCartShopping } from "react-icons/fa6";
 
-const CartWidget = () => {
+const CartWidget = (props) => {
     return(
         <div>
-            <FaCartShopping />
-            0
+            <img src={cart} alt="Cart Shop" />
+            <h1> {props.label} </h1>
         </div>
     )
 }

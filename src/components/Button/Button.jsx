@@ -1,5 +1,5 @@
 const Button = (props) => {
-    return <button> {props.label} </button>
+    return <button className="btn btn-danger mx-1"> {props.label} </button>
 }
 
 export default Button

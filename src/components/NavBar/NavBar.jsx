@@ -1,16 +1,17 @@
 import CartWidget from "../CartWidget/CartWidget"
-import ryno from "./img/ryno.png"
+import logo from "./img/logo.png"
 import Button from "../Button/Button"
 
 const NavBar = () => {
     return(
         <>
-            <img src= {ryno} style={{width:200}} />
+            <img src= {logo} style={{width:250}} />
+            <div>
             <Button label = {"Inicio"} />
             <Button label = {"Suplementos"} />
             <Button label = {"Acesorios"} />
             <Button label = {"Indumentaria"} />
-            <CartWidget/>
+            </div>
         </>
     )
 }
