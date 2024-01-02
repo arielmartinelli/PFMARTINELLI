@@ -17,12 +17,14 @@ const ItemCount = () => {
     }
 
     return (
-        <div>
-            <div>
-                <CartWidget label={count}/>
+        <div className="item-count">
+            <div id="inc-dec">
+                <button className="btn btn-danger mx-1" onClick={incrementar} >Incrmentar</button>
+                <button className="btn btn-danger mx-1" onClick={decrementar} >Decremetar</button>
             </div>
-            <button className="btn btn-danger mx-1" onClick={incrementar} >Incrmentar</button>
-            <button className="btn btn-danger mx-1" onClick={decrementar} >Decremetar</button>
+            <div id="cart">
+                <CartWidget label={count} />
+            </div>
         </div>
     )
 }

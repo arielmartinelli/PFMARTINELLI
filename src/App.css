@@ -1,7 +1,61 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1480px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.nav-box{
+  width: 170px;
+  height: 100vh;
+  background-color: rgb(223, 223, 223);
+  padding-left: 1rem;
+}
+
+.button-nav-bar{
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.button-nav-bar:hover{
+  color: red;
+}
+
+.nav-list{
+  list-style:none ;
+  margin-top: 2rem;
+}
+
+.nav-list li{
+  margin-bottom: 1rem;
+}
+
+.item-count{
+  position: absolute;
+  top: 0;
+  left: 10rem;
+  width: 100%;
+  background-color: rgb(223, 223, 223);
+  height: 80px;
+}
+
+#cart{
+  position: absolute;
+  top: 0;
+  right: 11rem;
+  padding: 10px;
+} 
+#inc-dec{
+  position: absolute;
+  top: .5rem;
+  left: 25rem;
+  padding: 10px;
+} 
+
+#item-container{
+  position: absolute;
+  top: 25vh;
+  left: 50vh;
 }
 
