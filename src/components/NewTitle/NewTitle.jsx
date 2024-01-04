@@ -1,5 +1,5 @@
 const NewTitle = () => {
-    document.title = "RYNO"
+    document.title = "Atomic"
 }
 
 export default NewTitle

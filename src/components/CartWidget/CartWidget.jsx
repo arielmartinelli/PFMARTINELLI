@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const CartWidget = (props) => {
   return (
-    <div className="d-flex align-items-center">
-      <img src={cart} alt="Cart Shop"  style={{width:40}}/>
-      <h1>{props.label}</h1>
+    <div className="d-flex align-items-center pt-1">
+      <h1 id="cart-number">{props.label}</h1>
+      <img src={cart} alt="Cart Shop"  style={{width:30}}/>
     </div>
   );
 };

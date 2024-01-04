@@ -14,8 +14,8 @@ const ItemListContainer = ({greeting}) => {
     }, [])
 
     return (
-        <div id="item-container">
-            <h1 className="mb-5"> {greeting} </h1>
+        <div id="item-container" className="ms-0 item-container">
+            <h1 className="ms-5"> {greeting} </h1>
             <ItemList products={products} />
         </div>
     )

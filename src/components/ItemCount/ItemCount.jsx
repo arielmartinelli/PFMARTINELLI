@@ -17,9 +17,9 @@ const ItemCount = () => {
     }
 
     return (
-        <div className="item-count">
+        <div className="item-count d-flex mt-4">
             <div id="inc-dec">
-                <button className="btn btn-danger mx-1" onClick={incrementar} >Incrmentar</button>
+                <button className="btn btn-danger me-1" onClick={incrementar} >Incrementar</button>
                 <button className="btn btn-danger mx-1" onClick={decrementar} >Decremetar</button>
             </div>
             <div id="cart">
