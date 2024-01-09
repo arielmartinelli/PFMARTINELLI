@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
-import ItemCount from '../ItemCount/ItemCount';
+import CartWidget from '../CartWidget/CartWidget';
 
 const MainMenu = () => {
     const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
@@ -29,6 +29,9 @@ const MainMenu = () => {
                         <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Atomic Shop</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
+                    <div id="cart">
+                            <CartWidget label={0} />
+                        </div>
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
@@ -59,7 +62,7 @@ const MainMenu = () => {
                                 </ul>
                             </li>
                         </ul>
-                        <ItemCount/>
+                        
                     </div>
                 </div>
             </div>

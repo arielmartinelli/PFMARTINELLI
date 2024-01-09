@@ -62,9 +62,12 @@
 }
 
 #cart-number{
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 2px;
-  margin-left: 5.5rem;
+}
+
+#cart-img{
+  margin-left: 1rem;
 }
 
 #menu{
@@ -104,4 +107,17 @@
   width: 20% !important;
   margin: 2% 2%;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-p p{
+  font-size: 1.2rem;
+}
+
+.item-count h2{
+  font-size: 1.5rem;
+}
+
+.item-count .mas-menosn{
+  font-size: .5rem;
+  padding: 0 1rem;
 }

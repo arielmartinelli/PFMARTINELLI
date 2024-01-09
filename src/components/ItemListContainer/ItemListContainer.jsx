@@ -11,6 +11,9 @@ const ItemListContainer = ({greeting}) => {
         .then(response => {
             setProducts(response)
         })
+        .catch(error => {
+            console.error(error)
+        })
     }, [])
 
     return (
