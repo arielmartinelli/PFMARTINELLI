@@ -1,17 +1,13 @@
-import CartWidget from "../CartWidget/CartWidget"
 import logo from "./img/logo.png"
-import Button from "../Button/Button"
-import ButtonNavBar from "../ButtonNavBar/ButtonNavBar"
-import ItemCount from "../ItemCount/ItemCount"
 import Search from "../Search/Search"
-import DiscountBar from "../DiscountBar/DiscountBar"
 import MainMenu from "../MainMenu/MainMenu"
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
     return (
         <div className="p-4 nav-box d-flex">
-            <img src={logo} style={{ width: 300 }} />
-            <div className="nav-content d-flex mt-4">
+            <Link to={'/'}> <img className="logo" src={logo}  /> </Link>
+            <div className="nav-content d-flex mt-2">
                 <Search />
             </div>
             <MainMenu/>

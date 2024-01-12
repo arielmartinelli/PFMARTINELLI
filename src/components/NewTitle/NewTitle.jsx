@@ -1,5 +1,6 @@
-const NewTitle = () => {
-    document.title = "Atomic"
-}
 
-export default NewTitle
+const NewTitle = ({ title }) => {
+    document.title = title || 'Atomic' 
+  }
+  
+  export default NewTitle;

@@ -1,19 +1,29 @@
-import { useState } from 'react'
 import './App.css'
-import NewTitle from './components/NewTitle/NewTitle'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import DiscountBar from './components/DiscountBar/DiscountBar'
 import FixedNav from './components/FixedNav/FixedNav'
-import ItemDetailConteiner from './components/ItemListContainer/ItemDetailConteiner/ItemDetailContainer'
+import HomeContainer from './components/HomeContainer/HomeContainer'
+import { BrowserRouter, Routes,Route } from 'react-router-dom'
+import Footer from './components/Footer/Footer'
+import ItemLiDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+
+
 
 function App() {
+
   return (
     <div>
-      <NewTitle />
-      <DiscountBar label={'20% off con cupon RYNO2024 | Envío GRATIS en compras superiores a $ 25.000'} />
-      <FixedNav/>
-     <ItemListContainer greeting={"Suplementos"} />
-     <ItemDetailConteiner/>
+      <BrowserRouter>
+        <FixedNav />
+        <Routes>
+        <Route path='/inicio' element={<HomeContainer/>} />
+        <Route path='/' element={<HomeContainer/>} />
+          <Route path="/suplementos" element={<ItemListContainer greeting={"Suplementos"} />} />
+          <Route path="/categoryId" element={<ItemListContainer greeting={"Productos filtrados"} />} />
+          <Route path='/detail/:productId' element={<ItemLiDetailContainer/>} /> 
+          
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

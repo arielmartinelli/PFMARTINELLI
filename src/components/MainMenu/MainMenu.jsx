@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 const MainMenu = () => {
     const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
@@ -35,29 +36,21 @@ const MainMenu = () => {
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">
-                                    Inicio
-                                </a>
+                                <Link className='link' to={"/inicio"}> Inicio </Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Productos
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li>
-                                        <a className="dropdown-item" href="#">
-                                            Suplementos
-                                        </a>
+                                    <li className='pt-2'>
+                                        <Link className='link' to={"/category/suplementos"} > Suplementos </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
-                                            Accesorios
-                                        </a>
+                                    <Link className='link' to={"/category/accesorios"} > Accesorios  </Link>
                                     </li>
-                                    <li>
-                                        <a className="dropdown-item" href="#">
-                                            Indumentaria
-                                        </a>
+                                    <li className='pb-2'>
+                                    <Link className='link' to={"/category/indumentaria"} > Indumentaria </Link>
                                     </li>
                                 </ul>
                             </li>
