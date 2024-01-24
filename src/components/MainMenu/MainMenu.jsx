@@ -36,7 +36,7 @@ const MainMenu = () => {
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
-                                <Link className='link' to={"/inicio"}> Inicio </Link>
+                                <Link className='link' to={"/"}> Inicio </Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
