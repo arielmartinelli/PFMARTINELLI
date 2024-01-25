@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 
 const HomeContainer = () => {
 
@@ -14,19 +14,19 @@ const HomeContainer = () => {
                 <div className="row text-center">
                     <div className="col-4 box-categoria">
                         <div className="box-img mx-auto">
-                            <a href="#"><img src="https://www.enasport.com/cdn/shop/files/Productos_21_300x.png?v=1702474426" alt="pROTEINA" /></a>
+                            <Link className='link' to={"/category/suplementos"} > <img src="https://www.enasport.com/cdn/shop/files/Productos_21_300x.png?v=1702474426" alt="pROTEINA" /></Link>
                         </div>
                         <h3 className="mt-3">Suplementos</h3>
                     </div>
                     <div className="col-4 box-categoria">
                         <div className="box-img mx-auto">
-                            <a href="#"><img src="https://www.enasport.com/cdn/shop/files/Cat-amino_300x.jpg?v=1702474045" alt="Accesorios" /></a>
+                            <Link className='link' to={"/category/accesorios"} > <img src="https://www.enasport.com/cdn/shop/files/Cat-amino_300x.jpg?v=1702474045" alt="Accesorios" />  </Link>
                         </div>
                         <h3 className="mt-3">Accesorios</h3>
                     </div>
                     <div className="col-4 box-categoria">
                         <div className="box-img mx-auto">
-                            <a href="#"><img src="https://www.enasport.com/cdn/shop/files/Productos_65_300x.png?v=1702474782" alt="Indumentaria" /></a>
+                            <Link className='link' to={"/category/indumentaria"} > <img src="https://www.enasport.com/cdn/shop/files/Productos_65_300x.png?v=1702474782" alt="Indumentaria" /> </Link>
                         </div>
                         <h3 className="mt-3">Indumentaria</h3>
                     </div>

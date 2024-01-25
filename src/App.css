@@ -232,7 +232,7 @@ transition: 1s ease;
 }
 
 .item-detail-container{
-  margin: 12rem 3rem 4rem 3rem !important;
+  margin: 9rem 3rem 4rem 3rem !important;
 }
 
 .item-container h1{
@@ -270,6 +270,7 @@ transition: 1s ease;
 .card-detail .price{
   font-size: 4rem;
   font-weight: 300;
+  color: green;
 }
 
 .card-detail .OldPrice{

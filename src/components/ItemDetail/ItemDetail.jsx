@@ -26,10 +26,10 @@ const ItemDetail = ({ id, name, OldPrice, img, price, stock, description }) => {
                         <p> {description} </p>
                         <div className="row mt-4">
                             <div className="col-6">
-                                <h3 className='OldPrice mb-0'> ${OldPrice} </h3>
-                                <h2 className='price'> ${price} </h2>
+                                <h3 className='OldPrice mb-0'> ${OldPrice.toLocaleString()} </h3>
+                                <h2 className='price'> ${price.toLocaleString()} </h2>
                             </div>
-                            <div className="col-6 mt-2">
+                            <div className="col-6 mt-2 d-flex align-items-center justify-content-center">
                                 <footer>
                                     {
                                         quantity === 0 ? (

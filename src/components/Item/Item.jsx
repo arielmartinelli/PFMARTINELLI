@@ -7,7 +7,7 @@ const Item = ({ id, name, img, price }) => {
                 <img src={img} style={{ width: 180 }} alt={name} />
             </div>
             <h3 className="mt-3">{name}</h3> 
-            <p> $ {price} </p>
+            <p> $ {price.toLocaleString()} </p>
             <div>
                 <Link to={`/detail/${id}`} className='btn btn-danger mb-4' > Detalle </Link>
             </div>
