@@ -1,21 +1,55 @@
-import React from 'react';
-import ItemCount from '../ItemCount/ItemCount';
-import { Link } from 'react-router-dom';
-import Item from '../Item/Item';
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ id, name, OldPrice, img, price, stock, description }) => {
+    const [quantity, setQuantity] = useState(0)
+
+    const handleOnAdd = (quantity) => {
+        const objProductToAdd = {
+            id, name, price, quantity
+        }
+        console.log(objProductToAdd)
+
+        setQuantity(quantity)
+    }
+
     return (
-        <div className="d-flex ms-4 flex-wrap card-prod">
-            {
-                products.map(prod => {
-                    return(
-                        <Item key={prod.id} name={prod.name} img={prod.img} price={prod.price} description={prod.description} category={prod.category} stock={prod.stock} /> 
-                        
-                    )
-                })
-            }
-        </div>
-    );
-};
+        <div>
+            <div className="card-detail">
+                <div className="row">
+                    <div className="col-6 ">
+                        <img src={img} alt={name} style={{ width: 400 }} />
+                    </div>
+                    <div className="col-6">
+                        <h3> {name} </h3>
+                        <p> {description} </p>
+                        <div className="row mt-4">
+                            <div className="col-6">
+                                <h3 className='OldPrice mb-0'> ${OldPrice} </h3>
+                                <h2 className='price'> ${price} </h2>
+                            </div>
+                            <div className="col-6 mt-2">
+                                <footer>
+                                    {
+                                        quantity === 0 ? (
+                                            <ItemCount onAdd={handleOnAdd} stock={stock} initial={1} />
+                                            ) : (
+                                            <button className='btn btn-danger'>
+                                                <Link id='end' to='/cart'>Finalizar compra</Link>
+                                            </button>
+                                            )
+                                    }
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-export default ItemDetail;
+            </div>
+        </div>
+
+    )
+}
+
+export default ItemDetail

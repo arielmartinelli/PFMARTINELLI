@@ -1,13 +1,14 @@
 const products = [
        {id: "1", name: "Proteina ENA", price: 25000,category: "suplementos",img: "https://www.farmacialeloir.com.ar/img/articulos/ena_whey_protein_true_made.jpg",
-        stock: 15, description: "Proteina de 1000mg."},
-       {id: "2", name: "Creatina ENA", price: 35000, category: "suplementos", img: "https://www.farmacialeloir.com.ar/img/articulos/2023/01/ena_creatina_micronizada_en_polvo_1_imagen2.jpg", stock: 5, description: "Creatina de 300mg."}, 
-       {id: "3", name: "BCAA ENA", price: 15000, category: "suplementos", img: "https://elbloquear.vtexassets.com/arquivos/ids/160309/97_gr_-_2021-08-02t152015.png?v=637870984361200000", stock: 13, description: "Amino acidos x 90 compr."},
-       {id: "4", name: "Barra Proteica", price: 15000, category: "suplementos", img: "https://www.enasport.com/cdn/shop/products/Caja_protein_vainilla_400x.jpg?v=1652799516", stock: 13, description: "Barra con 5% de proteina"},{id: "1", name: "Proteina ENA", price: 25000,category: "suplementos",img: "https://www.farmacialeloir.com.ar/img/articulos/ena_whey_protein_true_made.jpg",
-       stock: 15, description: "Proteina de 1000mg."},
-      {id: "2", name: "Creatina ENA", price: 35000, category: "suplementos", img: "https://www.farmacialeloir.com.ar/img/articulos/2023/01/ena_creatina_micronizada_en_polvo_1_imagen2.jpg", stock: 5, description: "Creatina de 300mg."}, 
-      {id: "3", name: "BCAA ENA", price: 15000, category: "suplementos", img: "https://elbloquear.vtexassets.com/arquivos/ids/160309/97_gr_-_2021-08-02t152015.png?v=637870984361200000", stock: 13, description: "Amino acidos x 90 compr."},
-      {id: "4", name: "Barra Proteica", price: 15000, category: "suplementos", img: "https://www.enasport.com/cdn/shop/products/Caja_protein_vainilla_400x.jpg?v=1652799516", stock: 13, description: "Barra con 5% de proteina"},
+        stock: 15, description: "Eleva tu ingesta proteica con nuestra Proteína ENA de alta calidad. Una fórmula equilibrada que proporciona los nutrientes esenciales para el desarrollo muscular y la recuperación después del ejercicio. Disponible en deliciosos sabores para que cada batido sea una experiencia única.", OldPrice: 30000},
+       {id: "2", name: "Creatina ENA", price: 35000, category: "suplementos", img: "https://www.farmacialeloir.com.ar/img/articulos/2023/01/ena_creatina_micronizada_en_polvo_1_imagen2.jpg", stock: 5, description: "Potencia tus entrenamientos con nuestra Creatina ENA, diseñada para mejorar la fuerza y la resistencia muscular. La creatina es un aliado clave para optimizar el rendimiento físico, ayudándote a alcanzar tus metas de fitness de manera eficaz y segura.", OldPrice: 40000}, 
+       {id: "3", name: "BCAA ENA", price: 15000, category: "suplementos", img: "https://elbloquear.vtexassets.com/arquivos/ids/160309/97_gr_-_2021-08-02t152015.png?v=637870984361200000", stock: 13, description: "Maximiza tu recuperación con nuestros BCAA ENA. Estos aminoácidos de cadena ramificada son esenciales para prevenir la fatiga muscular y acelerar la recuperación después del ejercicio intenso. Disfruta de una mezcla de sabores refrescantes mientras impulsas tu rendimiento.", OldPrice: 20000},
+       {id: "4", name: "Barra Proteica", price: 5000, category: "suplementos", img: "https://www.enasport.com/cdn/shop/products/Caja_protein_vainilla_400x.jpg?v=1652799516", stock: 13, description: "Saborea la nutrición con nuestras Barras Proteicas ENA. Una deliciosa combinación de proteínas de alta calidad y sabores irresistibles. Perfectas como snack entre comidas o para satisfacer tus antojos de manera saludable.", OldPrice: 7000},
+       {id: "1", name: "Proteina ENA", price: 25000,category: "suplementos",img: "https://www.farmacialeloir.com.ar/img/articulos/ena_whey_protein_true_made.jpg",
+        stock: 15, description: "Eleva tu ingesta proteica con nuestra Proteína ENA de alta calidad. Una fórmula equilibrada que proporciona los nutrientes esenciales para el desarrollo muscular y la recuperación después del ejercicio. Disponible en deliciosos sabores para que cada batido sea una experiencia única.", OldPrice: 30000},
+       {id: "2", name: "Creatina ENA", price: 35000, category: "suplementos", img: "https://www.farmacialeloir.com.ar/img/articulos/2023/01/ena_creatina_micronizada_en_polvo_1_imagen2.jpg", stock: 5, description: "Potencia tus entrenamientos con nuestra Creatina ENA, diseñada para mejorar la fuerza y la resistencia muscular. La creatina es un aliado clave para optimizar el rendimiento físico, ayudándote a alcanzar tus metas de fitness de manera eficaz y segura.", OldPrice: 40000}, 
+       {id: "3", name: "BCAA ENA", price: 15000, category: "suplementos", img: "https://elbloquear.vtexassets.com/arquivos/ids/160309/97_gr_-_2021-08-02t152015.png?v=637870984361200000", stock: 13, description: "Maximiza tu recuperación con nuestros BCAA ENA. Estos aminoácidos de cadena ramificada son esenciales para prevenir la fatiga muscular y acelerar la recuperación después del ejercicio intenso. Disfruta de una mezcla de sabores refrescantes mientras impulsas tu rendimiento.", OldPrice: 20000},
+       {id: "4", name: "Barra Proteica", price: 5000, category: "suplementos", img: "https://www.enasport.com/cdn/shop/products/Caja_protein_vainilla_400x.jpg?v=1652799516", stock: 13, description: "Saborea la nutrición con nuestras Barras Proteicas ENA. Una deliciosa combinación de proteínas de alta calidad y sabores irresistibles. Perfectas como snack entre comidas o para satisfacer tus antojos de manera saludable.", OldPrice: 7000},
 
       {id: "5", name: "Remera over", price: 12000,category: "indumentaria",img: "https://acdn.mitiendanube.com/stores/956/789/products/img-20240113-wa0010-d3094fe2a297aaeed717051678719498-240-0.webp",
        stock: 7, description: "Remera oversize premium."},
@@ -61,10 +62,10 @@ export const getProductsByCategory = (categoryId) =>{
     })
 }
 
-export const getProductById = (productId) =>{
+export const getProductById = (productId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find(prod => prod.id === productId))
-        }, 500)
+        }, 1000)
     })
 }

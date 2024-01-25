@@ -1,3 +1,4 @@
+
 #root {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 
 .link{
   text-decoration: none;
@@ -229,14 +231,68 @@ transition: 1s ease;
   margin-top: 12rem !important;
 }
 
+.item-detail-container{
+  margin: 12rem 3rem 4rem 3rem !important;
+}
+
 .item-container h1{
   margin-left: 3rem;
+}
+
+.item-detail-container h1{
+  margin-left: 3rem;
+}
+
+.item-count h2{
+  font-size: 2rem;
+}
+
+.item-count button{
+  height: 80%;
 }
 
 /*DETAIL*/
 
 .item-detail{
   margin-top: 15rem;
+}
+
+.card-detail{
+  margin-left: 2rem;
+  padding: 2rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-detail h3{
+  font-size: 4rem;
+}
+
+.card-detail .price{
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.card-detail .OldPrice{
+  font-size: 2rem;
+  font-weight: 250;
+  text-decoration: line-through;
+}
+
+.card-detail p{
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* ITEM COUNT*/
+
+#agregar-carrito{
+  font-size: 1.2rem;
+}
+
+#end{
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 /* FOOTER */
