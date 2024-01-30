@@ -1,18 +1,24 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import { useCart } from '../../context/CartContext'
+import { useNotification } from '../../notification/NotificationService'
 
 const ItemDetail = ({ id, name, OldPrice, img, price, stock, description }) => {
-    const [quantity, setQuantity] = useState(0)
+    const { addItem, getProductQuantity } = useCart()
+    const { showNotification } = useNotification()
 
     const handleOnAdd = (quantity) => {
         const objProductToAdd = {
             id, name, price, quantity
         }
-        console.log(objProductToAdd)
-
-        setQuantity(quantity)
+        addItem(objProductToAdd)
+        showNotification('info', `Se agregaron correctamente ${quantity} ${name}`)
     }
+
+    const productQuantity = getProductQuantity(id)
+
+    
 
     return (
         <div>
@@ -32,7 +38,7 @@ const ItemDetail = ({ id, name, OldPrice, img, price, stock, description }) => {
                             <div className="col-6 mt-2 d-flex align-items-center justify-content-center">
                                 <footer>
                                     {
-                                        quantity === 0 ? (
+                                        0 === 0 ? (
                                             <ItemCount onAdd={handleOnAdd} stock={stock} initial={1} />
                                             ) : (
                                             <button className='btn btn-danger'>
