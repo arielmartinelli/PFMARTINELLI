@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
 import ItemLiDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import { CartProvider } from './context/CartContext'
+import CartView from './components/CartView/CartView'
+import Checkout from './components/Checkout/Checkout'
 
 
 
@@ -18,10 +20,11 @@ function App() {
         <FixedNav />
           <Routes>
             <Route path='/' element={<HomeContainer />} />
+            <Route path="/category" element={<ItemListContainer greeting={"Productos"} />} />
             <Route path="/category/:categoryId" element={<ItemListContainer greeting={"Productos filtrados"} />} />
             <Route path='/detail/:productId' element={<ItemLiDetailContainer />} />
-            {/* <Route path='/cart' element={<CartView />} />
-            <Route path='/checkout' element={<Checkout />} /> */}
+            <Route path='/cart' element={<CartView />} />
+            <Route path='/checkout' element={<Checkout />} /> 
             <Route path='*' element={<h1>ERROR 404</h1>} />
           </Routes>
           <Footer />

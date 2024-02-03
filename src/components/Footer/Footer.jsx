@@ -17,7 +17,7 @@ const Footer = () => {
                     <div className="col-md-4">
                         <h3>Contacto</h3>
                         <p>Dirección: 123 Calle Principal, Ciudad</p>
-                        <p>Email: atomic@hotmail.com</p>
+                        <p>Email: Shark@hotmail.com</p>
                         <p>Teléfono: (555) 123-4567</p>
                     </div>
                     <div className="col-md-4">
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
                 <hr className="my-3" />
                 <div className="text-center">
-                    <p>&copy; 2022 ATOMIC. Todos los derechos reservados.</p>
+                    <p>&copy; 2022 Shark. Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>

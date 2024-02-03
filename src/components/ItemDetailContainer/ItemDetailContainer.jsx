@@ -1,49 +1,74 @@
-import { useState, useEffect } from "react"
-import { getProductById } from "../../asyncMock"
-import { useParams } from "react-router-dom"
-import ItemDetail from "../ItemDetail/ItemDetail"
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { db } from "../../services/firebaseConfig";
+import { getDoc, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-    const [loading, setLoading] = useState(true)
-    const [product, setProduct] = useState(null)
+  const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState(null);
 
-    const { productId } = useParams()
+  const { productId } = useParams();
 
-    useEffect(() => {
-        if(product) document.title = product.name
-        
-        return () => {
-            document.title = 'Ecommerce'
-        }
-    })
+  useEffect(() => {
+    if (product) document.title = product.name;
 
-    useEffect(() => {
-        setLoading(true)
+    return () => {
+      document.title = "Shark";
+    };
+  });
 
-        getProductById(productId)
-            .then(response => {
-                setProduct(response)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [productId])
+  useEffect(() => {
+    setLoading(true);
 
-    if(loading) {
-        return <h1>Cargando el producto...</h1>
-    }
+    const productDocument = doc(db, "products", productId);
 
-    if(!product) {
-        return <h1>El producto no existe</h1>
-    }
-    return (
-        <div id="item-detail-container" className="ms-0 item-detail-container p-4">
-            <ItemDetail {...product}/>
-        </div>
-    )
-}
+    getDoc(productDocument)
+      .then((queryDocumentSnapshot) => {
+        const fields = queryDocumentSnapshot.data();
+        const productAdapted = { id: queryDocumentSnapshot.id, ...fields };
+        setProduct(productAdapted);
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Hubo un error",
+        });
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [productId]);
 
-export default ItemDetailContainer
+  if (loading) {
+    return <div className="margen">
+        <h1>Cargando el producto...</h1>
+    </div>;
+  }
+
+  if (!product) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: "El producto no existe",
+    });
+
+    return <div className="margen rojo">
+        <h1 className="ms-5">¡UPS!</h1>
+        <h2> HUBO UN ERROR </h2>
+    </div>;
+  }
+
+  return (
+    <div
+      id="item-detail-container"
+      className="ms-0 item-detail-container p-4"
+    >
+      <ItemDetail {...product} />
+    </div>
+  );
+};
+
+export default ItemDetailContainer;

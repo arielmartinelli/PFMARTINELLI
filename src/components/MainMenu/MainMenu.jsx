@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
-
+import { useCart } from '../../context/CartContext'; 
 const MainMenu = () => {
     const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
+    const { totalQuantity } = useCart(); 
 
     const toggleOffcanvas = () => {
         setIsOffcanvasOpen(!isOffcanvasOpen);
@@ -27,35 +28,35 @@ const MainMenu = () => {
                 </button>
                 <div className={`offcanvas offcanvas-end ${isOffcanvasOpen ? 'show' : ''}`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div className="offcanvas-header">
-                        <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Atomic Shop</h5>
+                        <h5 className="offcanvas-title atomic-main-menu" id="offcanvasNavbarLabel">Shark Shop</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div id="cart">
-                            <CartWidget label={0} />
-                        </div>
-                    <div className="offcanvas-body">
+                    
+                    <div className="offcanvas-body li-main-menu">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
                                 <Link className='link' to={"/"}> Inicio </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className='link' to={"/category"}> Productos </Link>
+                            </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Productos
+                                    Filtrar productos
                                 </a>
-                                <ul className="dropdown-menu">
+                                <ul className="dropdown-menu li-main-menu">
                                     <li className='pt-2'>
                                         <Link className='link' to={"/category/suplementos"} > Suplementos </Link>
                                     </li>
                                     <li>
-                                    <Link className='link' to={"/category/accesorios"} > Accesorios  </Link>
+                                        <Link className='link' to={"/category/accesorios"} > Accesorios  </Link>
                                     </li>
                                     <li className='pb-2'>
-                                    <Link className='link' to={"/category/indumentaria"} > Indumentaria </Link>
+                                        <Link className='link' to={"/category/indumentaria"} > Indumentaria </Link>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
-                        
                     </div>
                 </div>
             </div>

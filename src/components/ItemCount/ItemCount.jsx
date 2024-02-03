@@ -19,12 +19,12 @@ const ItemCount = ({ initial = 1, stock, onAdd }) => {
     return (
         <div className="item-count ">
             <div id="inc-dec" className="d-flex ms-1">
-                <button className="btn btn-danger me-1 mas-menos" onClick={increment} >
-                    <FontAwesomeIcon icon={faPlus} />
-                </button>
-                <h2 className="mx-3"> {count} </h2>
                 <button className="btn btn-danger mx-1 mas-menos" onClick={decrement} >
                     <FontAwesomeIcon icon={faMinus} />
+                </button>
+                <h2 className="mx-3"> {count} </h2>
+                <button className="btn btn-danger me-1 mas-menos" onClick={increment} >
+                    <FontAwesomeIcon icon={faPlus} />
                 </button>
             </div>
             <div>

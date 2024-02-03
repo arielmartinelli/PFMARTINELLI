@@ -41,6 +41,8 @@ export const CartProvider = ({ children }) => {
       setCart(cartUpdated)
     }
 
+    
+
     const getTotalQuantity = () => {
         let accu = 0
 
@@ -74,11 +76,42 @@ export const CartProvider = ({ children }) => {
       return product?.quantity
     }
 
-    return (
-        <CartContext.Provider value={{ cart, addItem, removeItem, totalQuantity, total, clearCart, getProductQuantity }}>
-            { children }
-        </CartContext.Provider>
-    )
+    const removeOneItem = (productId) => {
+      const cartUpdated = cart.map(prod => {
+          if (prod.id === productId) {
+              return {
+                  ...prod,
+                  quantity: Math.max(prod.quantity - 1, 1)  
+              };
+          } else {
+              return prod;
+          }
+      });
+
+      setCart(cartUpdated);
+  };
+
+  const agreOneItem = (productId) => {
+      const cartUpdated = cart.map(prod => {
+          if (prod.id === productId) {
+              const newQuantity = prod.quantity + 1;
+              return {
+                  ...prod,
+                  quantity: Math.min(newQuantity, prod.stock)  
+              };
+          } else {
+              return prod;
+          }
+      });
+
+      setCart(cartUpdated);
+  };
+
+  return (
+      <CartContext.Provider value={{ cart, addItem, removeItem, removeOneItem, agreOneItem, totalQuantity, total, clearCart, getProductQuantity }}>
+          { children }
+      </CartContext.Provider>
+  );
 }
 
 export const useCart = () => {

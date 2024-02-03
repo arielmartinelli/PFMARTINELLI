@@ -2,8 +2,8 @@
 #root {
   margin: 0;
   padding: 0;
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .nav-box img{
-  width: 20% !important;
+  width: 80% !important;
 }
 
 #cart img{
@@ -97,17 +97,30 @@
 
 
 #cart-number{
-  font-size: 1.5rem;
-  margin-bottom: 2px;
+  position: absolute;
+  font-size: 1rem;
+  top: 3.3rem;
+  right: 6rem !important;
 }
 
 #cart-img{
-  margin-left: 1rem;
+  position: absolute;
+  width: 2rem !important;
+  top: 2.1rem;
+  right: 6.5rem;
 }
 
 #menu{
   color:rgb(32, 32, 32) ;
   font-size: 1.8rem;
+}
+
+.atomic-main-menu{
+  font-size: 2rem;
+}
+
+.li-main-menu li{
+  font-size: 1.3rem;
 }
 
 
@@ -228,7 +241,7 @@ transition: 1s ease;
 }
 
 .item-container{
-  margin-top: 12rem !important;
+  margin-top: 11rem !important;
 }
 
 .item-detail-container{
@@ -264,7 +277,7 @@ transition: 1s ease;
 }
 
 .card-detail h3{
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .card-detail .price{
@@ -280,7 +293,7 @@ transition: 1s ease;
 }
 
 .card-detail p{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -330,3 +343,71 @@ transition: 1s ease;
 .footer img{
   width: 60%;
 }
+
+.cart-view{
+  margin-top: 11rem !important;
+}
+
+.borde{
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.cart{
+  border: 1px solid rgba(128, 128, 128, 0.904);
+  width: 70%;
+}
+
+.cart button{
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+
+.detalle-price{
+  margin-top: 4.5rem !important;
+  height: 50%;
+}
+
+.claro h4{
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: rgb(63, 63, 63);
+}
+
+.margen{
+  margin-top: 20%;
+  margin-left: 40%;
+}
+
+.rojo{
+  color: red;
+}
+
+.form{
+  margin-top: 8rem;
+}
+
+.form-box{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 500px;
+  height: 300px;
+}
+
+.form-box input{
+  border: none;
+  border-bottom: 1px solid black;
+  width: 300PX;
+  outline: none;
+  background-color: transparent;
+}
+
+.form-box input:valid {
+  background-color: white; 
+
+}
+
+
+
+
+
