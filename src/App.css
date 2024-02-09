@@ -376,7 +376,7 @@ transition: 1s ease;
 
 .margen{
   margin-top: 20%;
-  margin-left: 40%;
+  margin-left: 35%;
 }
 
 .rojo{
@@ -405,6 +405,10 @@ transition: 1s ease;
 .form-box input:valid {
   background-color: white; 
 
+}
+
+#agregar-carrito{
+  font-size: 1rem !important;
 }
 
 
